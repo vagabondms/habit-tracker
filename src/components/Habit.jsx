@@ -8,6 +8,7 @@ const Habit = ({
   increaseCount,
   deleteHabit,
 }) => {
+  console.log("habit", name);
   return (
     <li className="habit">
       <span className="habit-name">{name}</span>

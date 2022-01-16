@@ -1,5 +1,5 @@
 import "./app.css";
-import { useReducer } from "react";
+import { useReducer, useMemo } from "react";
 import Navbar from "./components/Navbar";
 import Habits from "./components/Habits";
 import { v4 as uuidv4 } from "uuid";
@@ -47,7 +47,13 @@ const reducer = (state, action) => {
       });
     }
     case actionType.RESET: {
-      return state.map((habit) => ({ ...habit, count: 0 }));
+      return state.map((habit) => {
+        if (habit.count !== 0) {
+          return { ...habit, count: 0 };
+        } else {
+          return habit;
+        }
+      });
     }
     default:
       return state;

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Navbar = ({ count }) => {
+const Navbar = memo(({ count }) => {
+  console.log("navbar");
   return (
     <nav className="navbar">
       <span className="navbar-logo">
@@ -10,6 +11,6 @@ const Navbar = ({ count }) => {
       <span className="navbar-count">{count}</span>
     </nav>
   );
-};
+});
 
 export default Navbar;
