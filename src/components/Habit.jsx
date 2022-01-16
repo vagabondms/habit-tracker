@@ -9,7 +9,7 @@ const Habit = ({
   deleteHabit,
 }) => {
   return (
-    <div className="habit">
+    <li className="habit">
       <span className="habit-name">{name}</span>
       <span className="habit-count">{count}</span>
       <button
@@ -18,7 +18,7 @@ const Habit = ({
         }}
         className="habit-button habit-increase"
       >
-        <i className="fas fa-plus"></i>
+        <i className="fas fa-plus-square"></i>
       </button>
       <button
         onClick={() => {
@@ -26,7 +26,7 @@ const Habit = ({
         }}
         className="habit-button habit-decrease"
       >
-        <i className="fas fa-minus"></i>
+        <i className="fas fa-minus-square"></i>
       </button>
       <button
         onClick={() => {
@@ -36,7 +36,7 @@ const Habit = ({
       >
         <i className="fas fa-trash"></i>
       </button>
-    </div>
+    </li>
   );
 };
 
